@@ -1,0 +1,5 @@
+Program to find the weight of heaviest among 3 people.
+Writing the preprocessor that includes the standat input and output format.
+Declaring the three people weights as variable.
+Using logical operator with conditional operator it will comparing weights of people.
+After comparing all the conditions it will prints the heaviest.
