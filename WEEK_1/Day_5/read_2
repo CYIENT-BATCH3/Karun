@@ -1,0 +1,7 @@
+Program to find the area that covered.
+Writing the preprocessor that includes the standard input and output format.
+In next declaring the variable r.
+Keeping pi=3.14 as constant value.
+Next we taking the input from the user using scanf().
+Write the formula for Area of radius to calculate the area that covered.
+At last it will print the area that has covered.
