@@ -1,0 +1,29 @@
+2.WAP to read temperature in centigrating and display a suitable message according to temperture given below:
+Temp<0 then it if freezing
+Temp 0-10 then it is very cold
+Temp 10-20 then it is cold
+Temp 20-30 then it is normal
+Temp 30-40 then it is hot
+Temp >=40 then it is very hot
+
+
+#include <stdio.h>                  
+int main()
+{
+int temp;                           
+printf("enter temperature");
+scanf("%d",&temp);                  
+if(temp<0)                          
+printf("freezing");
+else if((temp<=0)&&(temp>=10))       
+printf("very cold");
+else if((temp<=10)&&(temp>=20))
+printf("cold");
+else if((temp<=20)&&(temp>=30))
+printf("normal");
+else if((temp<=30)&&(temp>=40))
+printf("hot");
+else if(temp>=40)
+printf("very hot");
+
+}
