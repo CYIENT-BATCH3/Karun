@@ -1,0 +1,12 @@
+//WAP to print natural number 1-100 
+#include<stdio.h>
+int main(){
+    int i=1,fact=1,n;          //declare the variables i and n and fact  
+    printf("enter a number");
+    scanf("%d",&n);             //reading the variable
+    while(i<=n){                //using while loop checking condition until it becomes true
+    fact=fact*i;                //multipling fact value with i and stores in fact 
+    i++;                        //incrementing i value
+    } 
+  printf("%d",fact);            //prints the factorial of given number
+}

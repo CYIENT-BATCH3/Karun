@@ -1,0 +1,13 @@
+//write a program to print odd numbers 1 to 50 using while
+#include <stdio.h>
+
+int main()
+{
+  int i=0,n=50;         //declaring the variables
+  while(i<=n){          //checking the condition using while loop 
+      if(i%2!=0){       //condition for checking the number is odd or not
+     printf("%d ",i);   //prints all the odd numbers up to 50
+      }
+    i++;		//incrementing i value
+  }
+}

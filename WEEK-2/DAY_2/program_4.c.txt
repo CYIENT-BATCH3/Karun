@@ -1,0 +1,11 @@
+//WAP to print natural number 1-100 using do-while
+#include<stdio.h>
+int main(){
+    int i=1,n=100;          //declare the variables i and n   
+    do{                     //
+        printf("%d ",i);   //printing 'i' value 
+        i++;		  //incrementing 'i' value
+    }
+   while(i<=100);
+   
+}
