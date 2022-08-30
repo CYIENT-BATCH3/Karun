@@ -1,0 +1,11 @@
+7.Write a program to input a hexadecimal value using scanf() in C  ?
+
+#include <stdio.h>			//including standard input and output libraries using preprossecive directives
+
+int main()
+{
+    int a;				//declaring the integer variable
+    printf("enter a hexadecimal value:");	
+    scanf("%x",&a);			//reading the hexadecimal value from user
+    printf("%d",a);			//printing the hexadecimal value
+}
