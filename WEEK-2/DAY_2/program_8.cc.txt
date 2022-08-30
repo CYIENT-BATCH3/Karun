@@ -1,0 +1,15 @@
+//WAP using break and continue?
+#include <stdio.h>
+
+int main() {
+    int i,n=10;
+    for(i=0;i<=10;i++){
+        if(i==7){
+        break;
+        //continue;
+    }
+    printf("%d ",i);
+}
+
+    return 0;
+}

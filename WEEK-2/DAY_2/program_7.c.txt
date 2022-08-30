@@ -1,0 +1,9 @@
+// WAP to print natural numbers using for loop
+#include <stdio.h>
+
+int main() {
+    int i,n=50;         //declaring the variables
+    for(i=0;i<=n;i++){  //using for loop checking the condition 
+     printf("%d ",i);   //printing 'i'  
+    }   
+}
