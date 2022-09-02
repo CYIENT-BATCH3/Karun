@@ -1,0 +1,13 @@
+//WAP to find factorial of a given number?
+#include<stdio.h>  
+int main()    
+{    
+ int i,fact=1,number;   //declaring the variables  
+ printf("Enter a number: ");    
+  scanf("%d",&number);    //reading the variables
+    for(i=1;i<=number;i++){ //using for loop   
+      fact=fact*i;   //condition for factorial   
+  }    
+  printf("Factorial of %d is: %d",number,fact);    
+return 0;  
+}   
