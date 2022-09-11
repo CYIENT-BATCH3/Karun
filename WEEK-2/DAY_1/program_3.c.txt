@@ -1,4 +1,10 @@
 // WAP to print calculator using switch case
+ALGORITHM:
+1.to perform calculator operation using switch case.
+2.declare integar variables and charcter variables.
+3.now take switch case to perform different operations.
+4.inside switch take different cases for different operations for calculator.
+
 #include <stdio.h>
 int main()
 {
