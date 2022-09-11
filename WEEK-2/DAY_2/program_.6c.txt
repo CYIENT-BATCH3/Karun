@@ -1,11 +1,24 @@
 //WAP to print to prime numbers 1-100?
+ALGORITHM:
+1.Start
+2.Declare Variable num, i, flag
+3.Intialize num=1,count=0
+4.use while loop for iteration
+5.Initialize Variable i=1 
+6.Repeat Until i<=num
+7.if(num%i==0)
+8.increment count
+9.If(count=2), Print prime
+10.else not prime
+11.Stop
+
 #include<stdio.h>
 int main(){
-   int i=1,n,count=0;		
+   int i=1,n,count=0;	//declare variables 	
   printf("enter a number");
-  scanf("%d",&n);		
-  while(i<=n){			
-      if(n%i==0)
+  scanf("%d",&n);	//reading variables	
+  while(i<=n){		//using loop 	
+      if(n%i==0) 
          count++; 
         i++;
   }
