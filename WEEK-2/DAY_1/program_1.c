@@ -1,4 +1,10 @@
 .WAP to find student grading using if,elseif and else conditions?
+  ALGORITHM:
+1.program to check student grading using if,elseif and else.
+2.declare integer variable as marks.
+3.first check with if conditon that marks are greater than 90 or less than 100.
+4.next checking with else if condition that marks are greater than 70 or less than 80.
+5.if above conditions become false it goes to else condition.
 
 #include <stdio.h>			//including stanadard input and output using preprocessive directives
 int main()
