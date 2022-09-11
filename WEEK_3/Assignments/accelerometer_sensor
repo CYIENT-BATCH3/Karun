@@ -1,13 +1,9 @@
 WAP for the acclerometer sensor to measure vehicle motion position of tilting using struct variale
- *
- * start
- * declare structure variable
- * take user input for 5 data for each axis
- * find the average of the each axis
- * compare it with predefined value for finding the position
- *
- */
-
+ ALGORITHM:
+ 1.to perform the vehicle motion position.
+ 2.declare the structure variable and inside declare some variables.
+ 3.in main function read 5 sensor data from user.
+ 4.for iteration using for loop  and checking conditions to move left,right,forward,backward.
 #include<stdio.h>
 
 struct accl_sensor
