@@ -1,4 +1,11 @@
-//write a program to print sum of 4 digit number
+//write a program to print sum of 4 digit number?
+ALGORITHM:
+1. Get number by user
+2. Get the modulus/remainder of the number
+3. sum the remainder of the number
+4. Divide the number by 10
+5. Repeat the step 2 while number is greater than 0.
+   
 #include <stdio.h>
 
 int main()
