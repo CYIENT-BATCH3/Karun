@@ -1,0 +1,43 @@
+/*  WAP to generate random 4 digit number using rand()             */
+ALGORITHM:
+1.to generate the random four digit number using rand function.
+2.declare the function in global.
+3.in main function declare some integer variables like num and num_conut.
+4.for continuous iteration take while loop.
+5.inside while loop take if condition that wheather count reached to 10 or not.
+6.if it is reached then break from loop else generate the number and check wheather it is 4 digit number or not.
+
+#include<stdio.h>
+#include<stdlib.h>
+int length_fn(int);                                 //fn prototype for digit counting function
+
+void main()
+{
+    
+    int num,num_count=0;
+   while(1)                                         //infinite loop
+    {
+     if(num_count ==10)                             //check weather noof pin reached 10 or not
+     break;                                         //if it is reachged then break out of infinite loop
+     else
+     {
+     num = rand()%9999;                             //else generate the number
+     if(length_fn(num)==4)                          //check weather it is 4 digit or not
+     {
+         printf("\n pin no %d = %d",num_count,num); //if it is 4 digit print number
+         num_count++;                               //increment the number count
+     }
+    }
+    }
+}
+
+int length_fn(int num)                              //fn for finding the no.of digit of the number
+{
+    int count=0;
+    while(num)
+    {
+        count++;
+        num = num/10;
+    }
+    return count;
+}
