@@ -1,4 +1,14 @@
 //WAP to blink led using switch
+1.start
+2.first to enable high speed crystal oscillator 
+3.we have configure that oscillator a code will be generated.
+4.set the oscillator speed at 20mega hzs and define rb0 as led as macro
+5.using tris register for setting paricular port or pin as input or output
+6.take while loop for iteration
+7.write if condition to check if switch is pressed led must glow 
+8.led will glow
+9.stop
+
 #pragma config OSC = HS      // Oscillator Selection bits (HS oscillator with PLL enabled/Clock frequency = (4 x FOSC))
 #pragma config OSCS = ON       // Oscillator System Clock Switch Enable bit (Oscillator system clock switch option is disabled (main oscillator is source))
 
