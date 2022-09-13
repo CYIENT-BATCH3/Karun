@@ -4,7 +4,7 @@
  * declare the structure with employee
  * declare the function as details with structure as argument
  * in main function declare the structure variable
- * now call that main function to define function
+ * now call that main function with address to define function
  * in defining function read and print the employee details
  */
 #include<stdio.h>
