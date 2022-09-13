@@ -1,0 +1,38 @@
+//WAP to perform add, sub by passing values from a structure and return a structure
+ALGORITHM:
+1.start
+2.declare the structure operattion with 2 members.
+3.take struct as return type and declare the function.
+4.in main function declare the structure variable and call functions to function defination.
+5.in defining function read the variables by user and return to the main function.
+6.now print the arthematic operations which are returned by function.
+
+#include<stdio.h>				//include standard input and output header file using preprocessor directive
+struct operation				//declare a structure operation with 2 members 
+{
+	int x;
+	int y;
+};
+struct operation add(struct operation struc);
+struct operation sub(struct operation struc);
+int main()							//start main()
+{
+	setbuf(stdout,NULL);
+	struct operation struc,add_output,sub_output;//declaring structure variable
+    add_output=add(struc);//call function to pass values to define function
+	printf("addition of %d ",add_output.x+add_output.y);
+	sub_output=sub(struc);//call function to pass values to define function
+	printf("subtraction of %d ",sub_output.x-sub_output.y);
+}
+struct operation add(struct operation struc)//function definition for add
+{
+	puts("enter the value");
+		scanf("%d %d",&struc.x,&struc.y);//reading the variables
+		return struc;//returning this function to main
+	}
+struct operation sub(struct operation struc)//function definition for sub
+{
+	puts("enter the values:\n");
+			scanf("%d %d",&struc.x,&struc.y);//reading variables
+			return struc;//returning this function to main
+}
