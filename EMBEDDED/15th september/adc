@@ -1,0 +1,22 @@
+//WAP to convert an Analog to Digital nd glow led if it is converted succesfully. 
+#include <xc.h>                                 //include xc.h
+#define _XTAL_FREQ 20000000                     //define crsytal frequency
+void main()                                        //start main())
+{
+    TRISA=0x01;                                 //configure RA0 as input
+    TRISC=0x00;                                 //Configure PORTC as output
+    PORTC=0x00;                                 //make PORTC low 
+    ADCON0=0x41;                                //define clock, channel and put on ADC using ADCON0
+    ADCON1=0xC0;                                //using ADCON1 define a/d port configuration and select result format.
+    unsigned a;                                 //declare an unsigned integer type variable to 'a' to store the A/D result.
+    while(1)
+    {
+        ADCON0=0x30;                            //Here we change channel 0th to 6th channel. 
+        __delay_ms(2);
+        GO_nDONE=1;                             // GO_nDONE=1 to indicate A/D conversion in progress 
+        while(GO_nDONE);
+        a=(ADRESH<<8)+ADRESL;                   //result is stored in a
+        PORTC=a;                                //a is assigned to PORTC
+        __delay_ms(500);
+    }
+}
