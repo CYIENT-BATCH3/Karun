@@ -1,0 +1,35 @@
+//WAP to convert decimal to binay conversion?
+/*ALGORITHM:
+ * Start
+ * Program to convert decimal to binary.
+ * Include the inputs and outputs using preprocessor directives.
+ * Using pass by value concept to pass the value from main function to defining function
+ * in defining function iterate the loop until 16 values is read
+ * take if condition extract each bit from the number and print it
+ * print the binary value in function.
+ */
+#include<stdio.h>
+void decimal_to_binary(int);			//fn for the decimal to binary conversuion
+int main()
+{
+	setbuf(stdout,NULL);
+	int num;
+	printf("\n enter the binary number:  ");		//take user inpurt in main program
+	scanf("%d",&num);
+	decimal_to_binary(num);								//call the function for the decimal to binary conversion
+	return 0;
+
+}
+
+void decimal_to_binary(int num)
+{
+	for(int i=15;i>=0;i--)							//iterate the loop until 16 values is read
+	{
+		if( num & (1<<i))							//extract each bit from the number and print it
+			printf("%d",1);							//if it is high thenprint 0
+		else
+			printf("%d",0);							//if it is low print 0;
+
+
+	}
+}
