@@ -10,18 +10,18 @@
  * it will prints after clearing the bit.
  */
 #include<stdio.h>
-void clear_bit();//function declaration
+void clear_bit();					//function declaration
 int main(){
 	setbuf(stdout,NULL);
 	int number,position;
-	printf("enter the number\n");//reading the variable
+	printf("enter the number\n");			//reading the variable
 	scanf("%d",&number);
 	printf("enter the position\n");
 	scanf("%d",&position);
-	clear_bit(number,position);//calling function;
+	clear_bit(number,position);			//calling function;
 }
-void clear_bit(int number,int position)//function defination
+void clear_bit(int number,int position)			//function defination
 {
-	number = number & (~(1<<position));
-	printf("after a clearing a bit:%d",number);//prints after clearing a bit
+	number = number & (~(1<<position));		//perform BIT AND operation to clear a bit
+	printf("after a clearing a bit:%d",number);	//prints after clearing a bit
 }
