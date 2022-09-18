@@ -1,0 +1,44 @@
+//WAP using function pointer (i)add function (ii)sub function
+ALGORITHM:
+1.start
+2.declare the function as result which passes the address as an argument to other function.
+3.declare the add and sub functions
+4.in main function result is called which we pass the address of add and sub.
+5.when result function is called, which we pass the address of add and sub..
+6.inside the result function call the add and sub function by dereferncing the pointer fptr and fptr2 contains address of add and sub.
+7.now it will print the addition and subtraction.
+8.stop.
+
+#include <stdio.h>
+
+int result( int(*fptr)(int, int), int (*fptr2) (int, int));//declaring the function as result which passes the address as an argument to other function.
+int add(int, int);                                      //declaring the function as add with two arguments
+int sub(int, int);                                      //declaring sub as function with two arguments
+
+int main()
+{
+    result(add,sub);                                    //called which we pass the address of add and sub
+    
+}
+int result( int(*fptr)(int , int), int (*fptr2) (int, int))// which we pass the address of add and sub.
+{
+    
+    fptr(10,20);                                            //called to add
+    fptr2(8,5);                                             //called to sub
+}
+
+int add(int a, int b)                                       //defining function for add
+{
+    int sum;
+    sum = a+b;
+    printf("sum = %d\n", sum);
+    
+}
+
+int sub(int a, int b)
+{
+    int sub;
+    sub = a-b;
+    printf("sub = %d\n",sub);
+    
+}
