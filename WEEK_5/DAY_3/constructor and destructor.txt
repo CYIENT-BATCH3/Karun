@@ -1,0 +1,42 @@
+//WAP to understand the default constructor and destructor concept?
+/*ALGORITHM:
+ * start
+ * program to understand the default constructor and destructor concept
+ * declare the class name as employee_details
+ * inside the class access public specifier
+ * in that public declare the constructor
+ * in constructor initialize the name and age
+ * using display function print the name and age
+ * after printing free the memory using destructor
+ * stop
+ */
+#include<iostream>
+using namespace std;
+class employee_details					//class name
+{
+	string employee_name;				//declaring the variables
+	int employee_age;
+public:
+	employee_details()					//constructor declaration
+	{
+		cout<<"default constructor:"<<endl;
+		employee_name="karun";
+		employee_age=24;
+	}
+	void display()						//display function to print class data members
+	{
+		cout<<"Name of employee is "<<employee_name<<endl;
+		cout<<"age of employee is "<<employee_age<<endl;
+	}
+	~employee_details()					//destructor declaration
+	{
+		cout<<"Freeing the memory"<<endl;
+		employee_name="karun";
+		employee_age=24;
+	}
+};
+int main()
+{
+	employee_details obj;//creating object in class
+	obj.display();//calling function to display
+}

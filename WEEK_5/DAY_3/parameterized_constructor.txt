@@ -1,0 +1,37 @@
+//WAP to understand the parameterized constructor concept?
+/*ALGORITHM:
+ * start
+ * program to understand the parameterized constructor concept
+ * declare the class name as employee_details
+ * inside the class access public specifier
+ * in that public declare the parameterized constructor with arguments
+ * in constructor initialize the name and age to constructor arguments
+ * using display function print the name and age
+ * in main function pass parameters using the instance object in class
+ * stop
+ */
+#include<iostream>
+using namespace std;
+class employee_details					//class name
+{
+	string name;				//declaring the variables
+	int age;
+public:
+	employee_details(string employee_name,int employee_age)	//parameterized constructor declaration
+	{
+		cout<<"parameterized constructor:"<<endl;
+		name=employee_name;			//initializing the arguments
+		age=employee_age;
+	}
+	void display()						//display function to print class data members
+	{
+		cout<<"Name of employee is "<<name<<endl;	//printing the name
+		cout<<"age of employee is "<<age<<endl;		//printing the age
+	}
+
+};
+int main()
+{
+	employee_details obj("karun",25);//instance object in class with parameters
+	obj.display();					//calling function to display
+}
