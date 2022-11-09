@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+//multiple inheritance
+class bluetooth{
+private:
+      int m_speed;
+public :
+      string m_company;
+protected :
+      int m_id;
+public:
+      bluetooth(){
+          cout << "default constructor for bluetooth_device" << endl;
+      }
+      ~bluetooth(){
+          cout << "default destructor for bluetooth_device" << endl;
+      }
+};
+class usb : public bluetooth{
+public:
+      usb(){
+          cout << "default constructor for usb_device" << endl;
+      }
+      ~usb(){
+          cout << "default destructor for usb_device" << endl;
+      }
+     
+      void print(){
+          cout << "company = " << m_company << "ID = " << m_id<<endl;
+      }
+};
+class usb1 : private bluetooth{
+public:
+      usb1(){
+          cout << "default constructor for usb_device" << endl;
+      }
+      ~usb1(){
+          cout << "default destructor for usb_device" << endl;
+      }
+     
+      void print(){
+          cout << "company = " << m_company << "ID = " << m_id<<endl;
+      }
+};
+class mouse : public bluetooth{
+public:
+      mouse(){
+          cout << "default constructor for mouse" << endl;
+      }
+      ~mouse(){
+          cout << "default destructor for mouse" << endl;
+      }
+     
+      void print(){
+          cout << "company = " << m_company << "ID = " << m_id<<endl;
+      }
+};
+class mouse1 : private bluetooth{
+public:
+      mouse1(){
+          cout << "default constructor for mouse1" << endl;
+      }
+      ~mouse1(){
+          cout << "default destructor for mouse1" << endl;
+      }
+      void print(){
+          cout << "company = " << m_company << "ID = " << m_id<<endl;
+      }
+};
+int main() {
+    mouse1 u1;
+}

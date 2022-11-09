@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+//inline initialisation
+class student{
+    int m_uid;
+    string m_name;
+    int m_phone;
+public:
+    student();
+    ~student();
+};
+student::student() : m_uid(0),m_name("empty"),m_phone(123654789)//inline initialisation
+{
+    cout << "student constructor" << endl;
+    
+}
+student::~student(){
+    cout << "student destructor" << endl;
+    m_uid = 0;
+    m_name = "empty";
+}
+int main(){
+    student s1;
+}

@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+class mobile{
+ public:
+       mobile();//default constructor
+       mobile(string name);//parameterised constructor
+       ~mobile();
+ private:
+      string m_name;
+      int m_model;
+};
+class mobileholder{
+    public:
+     void addmobile(mobile mob);
+     mobile getmobile(){
+         mobile mob("honor");
+         return mob;
+     }
+};
+void mobileholder::addmobile(mobile mob){
+    cout << "adding mobile" << endl;
+}
+mobile::mobile(){
+    cout << "welcome to constructor" << endl;
+    m_model = 0;
+    m_name = "karun";
+}
+mobile::mobile(string name){
+    cout << "welcome to parameterised-constructor" << endl;
+    m_model = 0;
+    m_name = name;
+}
+mobile::~mobile(){
+    cout << "welcome to destructor" << endl;
+    m_model = -1;
+    m_name = "vivo_v20";
+}
+void pushme(){
+   cout << "31-welcome to pushme" << endl;
+     mobile redmi;
+     cout << "32-welcome to pushme" << endl;
+     for(int i=0;i<5;i++);
+     cout << "33-welcome to pushme" << endl; 
+}
+void rushme(){
+   cout << "21-welcome to rushme" << endl;
+     mobile realme;
+     cout << "22-welcome to rushme" << endl;
+     for(int i=0;i<5;i++);
+     cout << "23-welcome to rushme" << endl; 
+     pushme();
+}
+void sendme(){
+     cout << "11-welcome to sendme" << endl;
+     mobile iq007;
+     cout << "12-welcome to sendme" << endl;
+     for(int i=0;i<5;i++);
+     cout << "13-welcome to sendme" << endl;
+     rushme();
+}
+void callme(){
+     cout << "1-welcome to callme" << endl;
+     mobile vivo;
+     cout << "2-welcome to callme" << endl;
+     for(int i=0;i<5;i++);
+     cout << "3-welcome to callme" << endl;
+     sendme();
+}
+int main(){
+    cout << "welcome to program" << endl;
+    int a;
+    /*mobile vivo1("karun");
+    mobile vivo2("akhil");
+    mobile vivo3("anil");
+    mobile vivo4("naveen");
+    for(int i=0;i<1;i++){
+    mobile vivo5("himalaya");
+    mobile vivo6("srusthi");
+    mobile vivo7("drusti");
+    mobile vivo8("muni");
+    }
+    mobile vivo9("shabber");*/
+    mobileholder holder;
+    //holder.addmobile(vivo1);
+    mobile mob = holder.getmobile();
+    cout << "i am done" << endl;
+    //callme();
+}

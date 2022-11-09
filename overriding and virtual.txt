@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+class device{
+protected:
+      int m_speed;
+public :
+      string m_company;
+protected :
+      int m_id;
+public:
+      device(){
+          cout << "constructor for device" << endl;
+      }
+      ~device(){
+          cout << "destructor for device" << endl;
+          print();
+      }
+      void setspeed(int x){
+          cout <<"myspeed = "<< endl;
+          m_speed = 200;
+          m_speed = x;
+      }
+      virtual void print(){
+          cout <<"device myspeed = "<< m_speed << endl;
+      }
+};
+class bluetooth : public device{
+public :
+     bluetooth(){
+          cout << "constructor for bluetooth" << endl;
+      }
+     ~bluetooth(){
+          cout << "destructor for bluetooth" << endl;
+      }
+     void print(){
+          cout <<" bluetooth myspeed = " << m_speed <<endl;
+      }
+};
+class usb : public device{
+public:
+     usb(){
+          cout << "constructor for usb" << endl;
+      }
+      ~usb(){
+          cout << "destructor for usb" << endl;
+      }
+       void print(){
+          cout <<" usb myspeed = " << m_speed << endl;
+      }
+};
+int main(){
+    cout << "welcome to inheritance" << endl;
+    //usb u1;
+    device *obj = nullptr;//address variable type is base
+    obj = new device;//object is also a base
+    cout << "Obj = " << obj << endl;
+    obj->setspeed(100);
+    obj->print();
+    //allowed bluetooth is also a device
+    //derived object address in assigned to base address variable
+    
+    obj = new bluetooth; 
+    obj->setspeed(200);
+    obj->print();
+    cout << "Obj = " << obj << endl;
+      //delete obj;
+    
+    obj = new usb; 
+    obj->setspeed(300);
+    obj->print();
+    cout << "Obj = " << obj << endl;
+    delete obj;
+}

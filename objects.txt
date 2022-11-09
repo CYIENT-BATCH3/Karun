@@ -1,0 +1,50 @@
+1.bench
+2.table
+3.chair
+4.duster
+5.earbuds
+6.clock
+7.laptops
+8.bottle
+9.door
+10.mouse
+11.keyboard
+12.switches
+13.books
+14.pen
+15.board
+16.glass
+17.projector
+18.air conditioners
+19.curtains
+20.lights
+21.frames
+22.mobiles
+23.ID cards
+24.Watches
+25.lunch box
+26.purse
+27.switch boards
+28.remote
+29.amplifier
+30.mic
+31.fire sensors
+32.speakers
+33.wires
+34.ups
+35.shoes
+36.socks
+37.adaptors
+38.lan cables
+39.id tags
+40.charger
+41.power bank
+42.wired earphones
+43.steel handle
+44.papers
+45.phone cover
+46.hand knapkeen
+47.spoon
+48.laptop bag
+49.mobile charger
+50.office telephone

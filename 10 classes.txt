@@ -1,0 +1,361 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class laptop{
+    int numberof_keys;
+    int laptop_weight;
+    int laptop_length;
+    int laptop_ports;
+    string laptop_colour;
+    string laptop_processor;
+    string my_name;
+public :
+     laptop();
+   laptop(int keys,string name){
+    cout<< "i am parameterized constructor-1"<<endl;
+    numberof_keys = keys;
+    my_name = name;
+    }
+    laptop(int weight,int ports){
+        cout<< "i am parameterized constructor-2"<<endl;
+        laptop_weight = weight;
+        laptop_ports = ports;
+        }
+    laptop(int length,string colour,string processor){
+        cout<< "i am parameterized constructor-3"<<endl;
+         laptop_length= length;
+        laptop_colour = colour;
+        laptop_processor = processor;
+    }
+     ~laptop(){
+                cout<<"destructor called laptop"<<endl;
+            }
+       void print(){
+           cout <<  laptop_length << laptop_colour << laptop_processor <<endl;
+       }
+};
+class car{
+    string car_colour;
+    string car_name;
+    int numberof_seats;
+    int numberof_tyres;
+    int numberof_windows;
+    int numberof_cameras;
+    //string my_name;
+public :
+    car();
+    car(string colour){
+      cout<< "i am parameterized constructor in car-1"<<endl;
+      car_colour = colour;
+    }
+    car(string name,int seats){
+        cout<< "i am parameterized constructor in car-2"<<endl;
+        car_name = name;
+        numberof_seats = seats;
+    }
+    car(int tyres,int windows,int camera){
+        cout<< "i am parameterized constructor in car-3"<<endl;
+        numberof_tyres = tyres;
+        numberof_windows = windows;
+        numberof_cameras = camera;
+    }
+    ~car(){
+                cout<<"destructor called in car"<<endl;
+            }
+};
+class human{
+     int numberof_hands;
+     int numberof_eyes;
+     int man_weight;
+     int man_height;
+     string man_name;
+     string man_colour;
+     
+public :
+      human();
+      human(int hand){
+          cout<< "i am parameterized constructor in human-1"<<endl;
+          numberof_hands = hand;
+      }
+      human(int eyes,int weight){
+          cout<< "i am parameterized constructor in human-2"<<endl;
+          numberof_eyes = eyes;
+          man_weight = weight;
+      }
+      human(int height,string name,string colour){
+          cout<< "i am parameterized constructor in human-3"<<endl;
+          man_height = height;
+          man_name = name;
+          man_colour = colour;
+      }
+      ~human(){
+                cout<<"destructor called in human"<<endl;
+            }
+};
+class bike{
+    int numberof_tyres;
+    int bike_milage;
+    int numberof_lights;
+    int numberof_mirrors;
+    string bike_name;
+    string bike_brand;
+public:
+      bike();
+      bike(int tyres){
+           cout<< "i am parameterized constructor in bike-1"<<endl;
+       numberof_tyres = tyres;
+       }
+      bike(int milage,int lights){
+           cout<< "i am parameterized constructor in bike-2"<<endl;
+          bike_milage = milage;
+          numberof_lights = lights;
+       }
+       bike(int mirror,string name,string brand){
+            cout<< "i am parameterized constructor in bike-3"<<endl;
+           numberof_mirrors = mirror;
+           bike_name = name;
+           bike_brand = brand;
+       }
+        ~bike(){
+                cout<<"destructor called in bike"<<endl;
+            }
+};
+class mobile{
+    string mobile_name;
+    string mobile_processor;
+    int numberof_buttons;
+    int numberof_ports;
+    int numberof_cameras;
+    int numberof_mics;
+public:
+   mobile();
+   mobile(string name){
+        cout<< "i am parameterized constructor in mobile-1"<<endl;
+    mobile_name = name;  
+   }
+   mobile(string processor,int button){
+       cout<< "i am parameterized constructor in mobile-2"<<endl;
+        mobile_processor = processor;
+        numberof_buttons = button;
+   }
+   mobile(int port,int camera,int mic){
+        cout<< "i am parameterized constructor in mobile-3"<<endl;
+        numberof_ports = port;
+        numberof_cameras = camera;
+        numberof_mics = mic;
+   }
+    ~mobile(){
+                cout<<"destructor called in mobile"<<endl;
+            }
+};
+class smartwatch{
+    int watch_cost;
+    int numberof_buttons;
+    string watch_name;
+    string watch_colour;
+    int watch_weight;
+    int numberof_belts;
+public :
+    smartwatch();
+    smartwatch(int cost){
+         cout<< "i am parameterized constructor in smartwatch-1"<<endl;
+        watch_cost = cost;
+    }
+    smartwatch(int button,string name){
+         cout<< "i am parameterized constructor in smartwatch-2"<<endl;
+       numberof_buttons = button;
+       watch_name = name;
+    }
+    smartwatch(string colour,int weight,int belt){
+        cout<< "i am parameterized constructor in smartwatch-3"<<endl;
+          watch_colour = colour;
+          watch_weight = weight;
+          numberof_belts = belt;
+    }
+    ~smartwatch(){
+                cout<<"destructor called in smartwatch"<<endl;
+            }
+};
+class shoes{
+      int shoe_weight;
+      int shoe_length;
+      string shoe_colour;
+      int shoe_size;
+      string shoe_brand;
+      string shoe_type;
+public :
+      shoes();
+      shoes(int weight){
+          cout<< "i am parameterized constructor in shoes-1"<<endl;
+          shoe_weight = weight;
+        }
+     shoes(int length,string colour){
+          cout<< "i am parameterized constructor in shoes-2"<<endl;
+          shoe_length = length;
+          shoe_colour = colour;
+     }
+     shoes(int size,string brand,string type){
+          cout<< "i am parameterized constructor in shoes-3"<<endl;
+          shoe_size = size;
+          shoe_brand = brand;
+          shoe_type = type;
+     }
+     ~shoes(){
+                cout<<"destructor called in shoes"<<endl;
+            }
+};
+class house{
+    int numberof_rooms;
+    int numberof_windows;
+    int number0f_doors;
+    int numberof_lights;
+    string house_colour;
+    string house_location;
+public :
+    house();
+    house(int room){
+        cout<< "i am parameterized constructor in house-1"<<endl;
+       numberof_rooms = room; 
+    }
+    house(int window,int door){
+        cout<< "i am parameterized constructor in house-2"<<endl;
+        numberof_windows = window;
+        number0f_doors = door;
+    }
+    house(int light,string colour,string location){
+        cout<< "i am parameterized constructor in house-3"<<endl;
+        numberof_lights = light;
+        house_colour = colour;
+        house_location = location;
+    }
+    ~house(){
+                cout<<"destructor called in house"<<endl;
+            }
+};
+class wallet{
+    int numberof_atms;
+    int numberof_currencynotes;
+    int wallet_weight;
+    int wallet_cost;
+    string wallet_colour;
+    string wallet_brand;
+public:
+    wallet();
+    wallet(int atm){
+        cout<< "i am parameterized constructor in wallet-1"<<endl;
+        numberof_atms = atm;
+    }
+    wallet(int notes,int weight){
+         cout<< "i am parameterized constructor in wallet-2"<<endl;
+         numberof_currencynotes = notes;
+         wallet_weight = weight;
+    }
+    wallet(int cost,string colour,string brand){
+        cout<< "i am parameterized constructor in wallet-3"<<endl;
+        wallet_cost = cost;
+         wallet_colour = colour;
+         wallet_brand = brand;
+    }
+     ~wallet(){
+                cout<<"destructor called in wallet"<<endl;
+            }
+};
+class collegebag{
+    int bag_weight;
+    string bag_colour;
+    string bag_brand;
+    int numberof_zips;
+    int numberof_books;
+    int numberof_pockets;
+public :
+    collegebag();
+    collegebag(int weight){
+         bag_weight = weight;
+    }
+    collegebag(string colour,string brand){
+         bag_colour = colour;
+         bag_brand = brand;
+    }
+    collegebag(int zip,int book,int pocket){
+        numberof_zips = zip;
+        numberof_books = book;
+        numberof_pockets = pocket;
+    }
+    ~collegebag(){
+                cout<<"destructor called in collegebag"<<endl;
+            }
+};
+laptop::laptop(){
+    cout << "i am the laptop constructor" <<endl;
+}
+car::car(){
+    cout << "i am the car constructor" <<endl;
+}
+human::human(){
+    cout << "i am the human constructor" <<endl;
+}
+bike::bike(){
+    cout << "i am the bike constructor" <<endl;
+}
+mobile::mobile(){
+    cout << "i am the mobile constructor" <<endl;
+}
+smartwatch::smartwatch(){
+    cout << "i am the smartwatch constructor" <<endl;
+}
+shoes::shoes(){
+    cout << "i am the shoe constructor" <<endl;
+}
+house::house(){
+    cout << "i am the house constructor" <<endl;
+}
+wallet::wallet(){
+    cout << "i am the purse constructor" <<endl;
+}
+collegebag::collegebag(){
+    cout << "i am the collegebag constructor" <<endl;
+}
+int main() {
+    laptop mylapi;
+    laptop mylapi2(124,"karun");
+    laptop mylapi3(15,4);
+    laptop mylapi4(123,"black","intel");
+    mylapi4.print();
+    car mycar;
+    car mycar1("black");
+    car mycar2("audi",3);
+    car mycar3(5,4,1);
+    human mybody;
+    human human1(2);
+    human human2(2,55);
+    human human3(6,"karun","black");
+    bike mybike;
+    bike mybike1(3);
+    bike mybike2(45,4);
+    bike mybike3(2,"pulsar","bajaj");
+    mobile mymobile;
+    mobile mymobile1("vivo");
+    mobile mymobile2("snapdragon",2);
+    mobile mymobile3(2,4,2);
+    smartwatch mywatch;
+    smartwatch mywatch1(2500);
+    smartwatch mywatch2(2,"boat");
+    smartwatch mywatch3("black",250,2);
+    shoes myshoe;
+    shoes myshoe1(25);
+    shoes myshoe2(15,"black");
+    shoes myshoe3(8,"puma","casual");
+    house myhome;
+    house myhome1(5);
+    house myhome2(20,10);
+    house myhome3(30,"cream","delhi");
+    wallet mywallet;
+    wallet mywallet1(2);
+    wallet mywallet2(5,200);
+    wallet mywallet3(250,"brown","woodland");
+    collegebag mybag;
+    collegebag mybag1(25);
+    collegebag mybag2("blue","wildcraft");
+    collegebag mybag3(4,10,5);
+    return 0;
+}

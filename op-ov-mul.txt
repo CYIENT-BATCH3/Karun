@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+class mymeter{
+public:
+    mymeter();
+    mymeter(int k,int no,int current,int voltage,int power){
+        cout << "parameterised constructor" << endl;
+        m_kilowatt = k;
+        m_number = no;
+        m_current = current;
+        m_voltage = voltage;
+        m_powerfactor = power;
+    }
+    int getkw() const;
+    int getcur() const;
+    int getvol() const;
+    int getpow() const;
+    void print(){
+    cout << "KW = " << m_kilowatt << endl;
+    cout << "current = " << m_current <<endl;
+    cout << "voltage = " << m_voltage << endl;
+    cout << "power factor = " << m_powerfactor << endl;
+}
+    int operator*(const mymeter &m){
+        cout << "go to hell" << m_number <<endl;
+        cout << "go to hell" << m.m_number <<endl;
+        int kw = m_kilowatt * m.m_kilowatt * m.m_kilowatt;
+        int current = m_current *m.m_current *m.m_current;
+        int voltage =  m_voltage*m.m_voltage*m.m_voltage;
+        int power = m_powerfactor*m.m_powerfactor*m.m_powerfactor;
+        cout << "consolidated bill KW="<< kw<< endl;
+        cout<< "current = " << current << endl;
+        cout<< "voltage = " << voltage << endl;
+        cout<< "power = " << power << endl;
+        return kw;
+    }
+    /*mymeter operator*(const mymeter &m){
+        mymeter mtemp;
+        cout << "go to hell" << m_number <<endl;
+        cout << "go to hell" << m.m_number <<endl;
+        mtemp.m_kilowatt = m_kilowatt*m.m_kilowatt;
+        mtemp.m_current = m_current*m.m_current;
+        mtemp.m_voltage = m_voltage*m.m_voltage;
+        mtemp.m_powerfactor = m_powerfactor*m.m_powerfactor;
+        cout << "consolidated bill KW="<< m_kilowatt<< endl;
+        cout<< "current = " << m_current << endl;
+        cout<< "voltage = " << m_voltage << endl;
+        cout<< "power = " << m_powerfactor << endl;
+        return mtemp;
+    }*/
+    ~mymeter();
+private :
+     int m_kilowatt;
+     int m_current;
+     int m_number;
+     int m_voltage;
+     int m_powerfactor;
+};
+int mymeter::getkw() const{
+    return m_kilowatt;
+}
+int mymeter::getcur() const{
+    return m_current;
+}
+int mymeter::getvol() const{
+    return m_voltage;
+}
+int mymeter::getpow() const{
+    return m_powerfactor;
+}
+mymeter::mymeter(){
+    cout << "default constructor in meter =" << m_number << endl;
+       }
+mymeter::~mymeter(){
+    cout << "default destructor in meter = " << m_number << endl;
+       }
+int main() {
+    cout << "electrical meter consolidation program" << endl;
+    mymeter m1(1000,2000,4500,250,2250);
+    mymeter m2(100,200,45,35,352);
+    mymeter m4(10,20,35,50,36);
+    m1*m2;//m1.operator*(m2);
+    //mymeter m3 = m1 * m2 * m4;
+    //m3.print();
+    return 0;
+     
+}
