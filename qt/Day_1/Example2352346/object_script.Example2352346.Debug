@@ -1,0 +1,11 @@
+debug/body.o
+debug/bones.o
+debug/eyes.o
+debug/hands.o
+debug/left_hand.o
+debug/left_leg.o
+debug/legs.o
+debug/main.o
+debug/mouth.o
+debug/right_hand.o
+debug/right_leg.o

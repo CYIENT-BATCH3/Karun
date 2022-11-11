@@ -1,0 +1,11 @@
+release/body.o
+release/bones.o
+release/eyes.o
+release/hands.o
+release/left_hand.o
+release/left_leg.o
+release/legs.o
+release/main.o
+release/mouth.o
+release/right_hand.o
+release/right_leg.o
