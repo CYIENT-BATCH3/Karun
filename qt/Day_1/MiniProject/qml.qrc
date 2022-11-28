@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Qml.qml</file>
+        <file>Qml2.qml</file>
+        <file>Qml3.qml</file>
+        <file>Qml4.qml</file>
+        <file>roc1.jpg</file>
+    </qresource>
+</RCC>
